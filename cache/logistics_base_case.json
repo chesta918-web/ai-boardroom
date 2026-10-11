@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "agent": "Optimist",
+      "message": "Route optimization targets road freight, which accounts for 41.7% of total logistics costs, with fuel taking 42.1% of road costs. Larger fleets already have GPS and dispatch systems, making deployment straightforward and low risk. Empty-run reduction also targets an estimated 40% empty-run share.",
+      "adjustments": [
+        {
+          "id": 1,
+          "factor": "deploy",
+          "delta": 1,
+          "reason": "Larger fleets already possess GPS and dispatch systems for deployment."
+        }
+      ]
+    },
+    {
+      "agent": "Skeptic",
+      "message": "Empty runs at 40% are unverified and require fragmented fleets to share data. Demand forecasting requires clean order history that many firms lack. Furthermore, SMEs lack digital infrastructure and have thin data, while warehouse manpower figures of 30% remain unverified.",
+      "adjustments": [
+        {
+          "id": 3,
+          "factor": "trust",
+          "delta": -1,
+          "reason": "The 40% empty-run figure is explicitly unverified."
+        }
+      ]
+    },
+    {
+      "agent": "CFO",
+      "message": "We cannot determine payback or ROI because implementation costs have no evidence provided. While road represents 41.7% of costs and rail costs Rs 1.96 per tonne-km, road comparison figures are conflicting and unverified. Without verified cost baselines and data readiness, capital allocation is risky.",
+      "adjustments": [
+        {
+          "id": 6,
+          "factor": "trust",
+          "delta": -1,
+          "reason": "Road comparative cost figures conflict across sources and require verification."
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "summary": "Route optimization offers the clearest path forward given verified road cost shares and existing fleet GPS infrastructure. Other initiatives face barriers from unverified cost figures and missing digital data among fragmented operators.",
+    "kill_criteria": [
+      {
+        "id": 1,
+        "line": "Drop this if target fleets lack GPS and dispatch systems."
+      },
+      {
+        "id": 2,
+        "line": "Drop this if the enterprise lacks clean historical order data."
+      },
+      {
+        "id": 3,
+        "line": "Drop this if fragmented fleets refuse to share operational data."
+      },
+      {
+        "id": 4,
+        "line": "Drop this if warehouse manpower costs are verified to be materially below 30%."
+      },
+      {
+        "id": 5,
+        "line": "Drop this if SMEs cannot establish baseline digital infrastructure and data."
+      },
+      {
+        "id": 6,
+        "line": "Drop this if road freight cost baselines cannot be verified against rail rates."
+      }
+    ]
+  }
+}

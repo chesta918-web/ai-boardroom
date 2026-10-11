@@ -1,0 +1,62 @@
+{
+  "turns": [
+    {
+      "agent": "Optimist",
+      "message": "Road represents 41.7% of logistics cost, with fuel at 42.1% of road cost. Larger fleets already possess GPS and dispatch systems, making route optimization low risk. Addressing reported 40% empty runs unlocks major value across road freight.",
+      "adjustments": []
+    },
+    {
+      "agent": "Skeptic",
+      "message": "The new data protection rule makes data sharing risky. Empty-run reduction relies on fragmented fleets sharing data, and that 40% figure is unverified. Furthermore, demand forecasting requires clean order history that many firms lack, while SMEs lack digital infrastructure.",
+      "adjustments": [
+        {
+          "id": 3,
+          "factor": "deploy",
+          "delta": -1,
+          "reason": "Needs many fragmented fleets to share data under new rules, and the 40% figure is unverified."
+        }
+      ]
+    },
+    {
+      "agent": "CFO",
+      "message": "Route optimization addresses proven cost drivers, but no evidence provided for software payback. Warehouse manpower costs of 30% are unverified, road comparison figures for mode shift conflict across sources, and demand forecasting's value is merely judgmental. We must withhold funding for speculative cases.",
+      "adjustments": [
+        {
+          "id": 4,
+          "factor": "value",
+          "delta": -1,
+          "reason": "Warehouse manpower being about 30% of warehouse cost is unverified."
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "summary": "Route optimization offers the clearest verified return given fuel and road cost shares, whereas broader consolidation and matching face severe data deficits and compliance risks. Prioritize existing fleet telemetry while halting initiatives reliant on unverified operational metrics or complex external data sharing.",
+    "kill_criteria": [
+      {
+        "id": 1,
+        "line": "Drop this if larger fleets lack functioning GPS and dispatch systems."
+      },
+      {
+        "id": 2,
+        "line": "Drop this if the firm lacks clean historical order data."
+      },
+      {
+        "id": 3,
+        "line": "Drop this if fragmented fleets refuse or are unable to share data compliant with rules."
+      },
+      {
+        "id": 4,
+        "line": "Drop this if warehouse manpower costs cannot be verified."
+      },
+      {
+        "id": 5,
+        "line": "Drop this if target SMEs cannot establish baseline digital infrastructure and clean data."
+      },
+      {
+        "id": 6,
+        "line": "Drop this if conflicting road freight cost figures cannot be verified against rail's Rs 1.96 per tonne-km."
+      }
+    ]
+  }
+}

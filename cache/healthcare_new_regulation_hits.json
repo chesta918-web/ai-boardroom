@@ -1,0 +1,81 @@
+{
+  "turns": [
+    {
+      "agent": "Optimist",
+      "message": "Claims automation cut discharge turnaround by 6 to 7 hours, with 57% of hospital executives ready for NHCX. Additionally, ambient scribing drafts prescriptions in under a minute with about 90% requiring no edits, offering immediate efficiency gains for clinical workflows.",
+      "adjustments": [
+        {
+          "id": 2,
+          "factor": "value",
+          "delta": 1,
+          "reason": "Claims-query automation cut discharge turnaround by 6 to 7 hours."
+        }
+      ]
+    },
+    {
+      "agent": "Skeptic",
+      "message": "We must be cautious. Payer-side AI adjudication adds risk to billing, while ambient scribing faces hurdles because EMR adoption is only about 35% and doctors must stay in the loop. Furthermore, radiology models are trained on Western data, PACS is not AI-ready, and doctors must certify findings.",
+      "adjustments": [
+        {
+          "id": 2,
+          "factor": "trust",
+          "delta": -1,
+          "reason": "Payer-side AI adjudication adds some new risk."
+        },
+        {
+          "id": 5,
+          "factor": "trust",
+          "delta": -1,
+          "reason": "Models are trained on Western data and PACS is not AI-ready."
+        }
+      ]
+    },
+    {
+      "agent": "CFO",
+      "message": "Radiology per-patient ROI is unproven and GPU cost is high. Chatbots and front-door scheduling show limited incremental value, and chronic care reimbursement models remain unclear. We should prioritize finance automation, where 83% of hospitals have ERP integrated, finance AI is live, and systems are audit-friendly.",
+      "adjustments": [
+        {
+          "id": 5,
+          "factor": "value",
+          "delta": -1,
+          "reason": "Per-patient ROI is unproven and GPU cost is high."
+        },
+        {
+          "id": 3,
+          "factor": "value",
+          "delta": -1,
+          "reason": "Chatbots and front-door tools show limited incremental value."
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "summary": "Enterprise back-office and claims automation provide the most dependable efficiency gains given strong ERP penetration and documented discharge turnaround cuts. High GPU expenses, thin EMR adoption, and unproven clinical ROI restrict immediate expansion into specialized diagnostic and longitudinal tracking tools.",
+    "kill_criteria": [
+      {
+        "id": 1,
+        "line": "Drop this if EMR adoption fails to expand beyond about 35% or doctor oversight cannot be maintained."
+      },
+      {
+        "id": 2,
+        "line": "Drop this if payer-side AI adjudication risks outweigh the discharge turnaround savings of 6 to 7 hours."
+      },
+      {
+        "id": 3,
+        "line": "Drop this if clinical triage resistance continues and front-door tools yield only limited incremental value."
+      },
+      {
+        "id": 4,
+        "line": "Drop this if mixed HR results compromise the stability of audit-friendly ERP workflows."
+      },
+      {
+        "id": 5,
+        "line": "Drop this if high GPU costs and unproven per-patient ROI persist while PACS remains not AI-ready."
+      },
+      {
+        "id": 6,
+        "line": "Drop this if EMR remains too thin for longitudinal models and reimbursement models stay unclear."
+      }
+    ]
+  }
+}

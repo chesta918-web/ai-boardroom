@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "agent": "Optimist",
+      "message": "Ambient scribing drafts prescriptions in under a minute with 90% needing no edits at a cardiac group. Furthermore, claims automation cuts discharge turnaround by 6 to 7 hours, with 57% of hospital executives already ready for NHCX. These high-value interventions deliver immediate operational efficiency.",
+      "adjustments": [
+        {
+          "id": 2,
+          "factor": "value",
+          "delta": 1,
+          "reason": "Claims automation cuts discharge turnaround by 6 to 7 hours with 57% executive readiness."
+        }
+      ]
+    },
+    {
+      "agent": "Skeptic",
+      "message": "Ambient scribing faces hurdles since EMR adoption is only about 35% and doctors must stay in the loop. Claims automation introduces payer-side adjudication risk. Radiology models are trained on Western data while PACS is not AI-ready, and post-discharge monitoring is bottlenecked by thin EMRs and unclear operating models.",
+      "adjustments": [
+        {
+          "id": 5,
+          "factor": "trust",
+          "delta": -1,
+          "reason": "Radiology models are trained on Western data and doctor certification is mandatory."
+        }
+      ]
+    },
+    {
+      "agent": "CFO",
+      "message": "Radiology has high GPU costs and unproven per-patient ROI, with capital expenditure numbers having no evidence provided. Chatbots show limited incremental value. Post-discharge care lacks established reimbursement and operating models. We must avoid heavy capital investments where clear economic returns are absent.",
+      "adjustments": [
+        {
+          "id": 3,
+          "factor": "value",
+          "delta": -1,
+          "reason": "Front-door scheduling chatbots demonstrate limited incremental value."
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "summary": "Administrative and claims automation provide the most dependable efficiency gains due to existing ERP readiness and significant discharge time reductions. Conversely, diagnostic and longitudinal monitoring applications remain hindered by high infrastructure costs, thin EMR adoption, and unproven per-patient reimbursement.",
+    "kill_criteria": [
+      {
+        "id": 1,
+        "line": "Drop this if EMR adoption remains stagnant near 35% or doctor oversight negates the drafting time saved."
+      },
+      {
+        "id": 2,
+        "line": "Drop this if payer-side AI adjudication introduces dispute risks that negate the 6 to 7 hour discharge reduction."
+      },
+      {
+        "id": 3,
+        "line": "Drop this if front-door tools continue delivering limited incremental value while triage resistance continues."
+      },
+      {
+        "id": 4,
+        "line": "Drop this if mixed HR automation outcomes fail to justify integration across remaining non-ERP systems."
+      },
+      {
+        "id": 5,
+        "line": "Drop this if high GPU costs and non-AI-ready PACS persist alongside unproven per-patient ROI."
+      },
+      {
+        "id": 6,
+        "line": "Drop this if EMR records remain too thin for longitudinal tracking and reimbursement models remain undefined."
+      }
+    ]
+  }
+}

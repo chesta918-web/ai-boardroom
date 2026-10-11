@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "agent": "Optimist",
+      "message": "Claims automation cuts discharge turnaround by 6 to 7 hours, and 57% of hospital executives are ready for NHCX. Meanwhile, ambient scribing drafts prescriptions in under a minute with 90% needing no edits, and 83% of hospitals have integrated ERPs. Operational and ambient tools offer immediate execution gains.",
+      "adjustments": [
+        {
+          "id": 2,
+          "factor": "value",
+          "delta": 1,
+          "reason": "Claims automation demonstrated discharge turnaround reductions of 6 to 7 hours."
+        }
+      ]
+    },
+    {
+      "agent": "Skeptic",
+      "message": "Messy data undermines clinical execution. Ambient scribing is hindered because EMR penetration is only about 35%, while EMR is too thin for post-discharge longitudinal models. Additionally, PACS is not AI-ready, models rely on Western data, clinical triage meets resistance, and payer-side AI adjudication introduces new operational risks.",
+      "adjustments": [
+        {
+          "id": 1,
+          "factor": "deploy",
+          "delta": -1,
+          "reason": "EMR adoption is only about 35% and doctors must remain in the loop."
+        }
+      ]
+    },
+    {
+      "agent": "CFO",
+      "message": "Radiology AI requires high GPU costs while per-patient ROI remains unproven. Similarly, post-discharge chronic care has unclear reimbursement and operating models, and front-door scheduling tools show limited incremental value. We should concentrate capital on integrated ERP finance automations that are already live, audit-friendly, and free of clinical exposure.",
+      "adjustments": [
+        {
+          "id": 5,
+          "factor": "value",
+          "delta": -1,
+          "reason": "Per-patient ROI is unproven and GPU cost is high."
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "summary": "Messy data and low EMR adoption severely restrict clinical use cases such as post-discharge monitoring, scribing, and radiology. Near-term deployment must prioritize claims and ERP automation where integrated infrastructure is already established and returns are defensible.",
+    "kill_criteria": [
+      {
+        "id": 1,
+        "line": "Drop this if EMR adoption stays around 35% or doctor review burden negates drafting speed."
+      },
+      {
+        "id": 2,
+        "line": "Drop this if payer-side AI adjudication risk outweighs the 6 to 7 hour discharge savings."
+      },
+      {
+        "id": 3,
+        "line": "Drop this if clinical triage resistance continues and incremental value remains limited."
+      },
+      {
+        "id": 4,
+        "line": "Drop this if mixed HR automation results compromise existing integrated ERP workflows."
+      },
+      {
+        "id": 5,
+        "line": "Drop this if PACS remains unready for AI and high GPU costs continue without per-patient ROI."
+      },
+      {
+        "id": 6,
+        "line": "Drop this if EMR data remains too thin for longitudinal models and reimbursement models stay unclear."
+      }
+    ]
+  }
+}

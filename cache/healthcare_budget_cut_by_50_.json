@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "agent": "Optimist",
+      "message": "Claims automation cut discharge turnaround by 6 to 7 hours, and 57% of executives are NHCX-ready. Ambient scribing drafts prescriptions in under a minute with 90% needing no edits. These deliver immediate operational wins despite budget cuts.",
+      "adjustments": [
+        {
+          "id": 2,
+          "factor": "value",
+          "delta": 1,
+          "reason": "Discharge turnaround cuts of 6 to 7 hours and 57% NHCX readiness demonstrate strong immediate return."
+        }
+      ]
+    },
+    {
+      "agent": "Skeptic",
+      "message": "EMR adoption is only about 35% for ambient scribing, requiring doctors to stay in the loop. Radiology models rely on Western data, PACS is not AI-ready, and per-patient ROI is unproven. Additionally, post-discharge lacks clear reimbursement models and EMR is too thin.",
+      "adjustments": [
+        {
+          "id": 1,
+          "factor": "deploy",
+          "delta": -1,
+          "reason": "EMR adoption is only about 35% and doctors must remain in the loop."
+        }
+      ]
+    },
+    {
+      "agent": "CFO",
+      "message": "With our 50% budget cut, radiology's high GPU costs and unproven per-patient ROI are unacceptable. Scheduling chatbots show limited incremental value. We must fund finance automation where 83% have ERP integrated, finance AI is live, audit-friendly, and carries no clinical exposure.",
+      "adjustments": [
+        {
+          "id": 5,
+          "factor": "value",
+          "delta": -1,
+          "reason": "High GPU costs and unproven per-patient ROI make it unsustainable under budget constraints."
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "summary": "With a 50% budget cut, capital must concentrate on claims and ERP finance automation where proven discharge efficiencies and existing integration provide immediate stability. Capital-intensive radiology and data-constrained monitoring projects are paused due to high GPU costs and immature EMR infrastructure.",
+    "kill_criteria": [
+      {
+        "id": 1,
+        "line": "Drop this if EMR adoption remains around 35% and doctor oversight negates drafting efficiency."
+      },
+      {
+        "id": 2,
+        "line": "Drop this if payer-side AI adjudication risks outweigh the 6 to 7 hour discharge turnaround gains."
+      },
+      {
+        "id": 3,
+        "line": "Drop this if front-door tools continue yielding limited incremental value and clinical triage resistance persists."
+      },
+      {
+        "id": 4,
+        "line": "Drop this if mixed HR outcomes begin degrading existing ERP integration benefits."
+      },
+      {
+        "id": 5,
+        "line": "Drop this if high GPU costs continue without established per-patient ROI or AI-ready PACS."
+      },
+      {
+        "id": 6,
+        "line": "Drop this if reimbursement models remain unclear and EMR data remains too thin for longitudinal tracking."
+      }
+    ]
+  }
+}

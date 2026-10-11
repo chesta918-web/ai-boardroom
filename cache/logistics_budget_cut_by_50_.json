@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "agent": "Optimist",
+      "message": "With budgets halved, we must prioritize Route Optimization. Road represents 41.7% of total logistics costs, and fuel takes 42.1% of that. Larger fleets already possess GPS and dispatch systems, ensuring low risk and viable implementation. Empty-run reduction also targets a 40% reported issue across road freight.",
+      "adjustments": [
+        {
+          "id": 1,
+          "factor": "deploy",
+          "delta": 1,
+          "reason": "Larger fleets usually already have GPS and dispatch systems."
+        }
+      ]
+    },
+    {
+      "agent": "Skeptic",
+      "message": "The 40% empty-run claim is unverified and demands fragmented fleets share data. For demand forecasting, many firms lack the necessary clean order history. Meanwhile, SMEs hold thin data and little digital infrastructure, and mode-shift calculations remain risky because road cost sources actively conflict.",
+      "adjustments": [
+        {
+          "id": 3,
+          "factor": "trust",
+          "delta": -1,
+          "reason": "Empty-run figure of 40% is explicitly unverified."
+        }
+      ]
+    },
+    {
+      "agent": "CFO",
+      "message": "With a 50% budget cut, unverified numbers are unacceptable. Warehouse manpower costs at 30% remain unverified, and mode shift cannot prove savings since road figures conflict. There is no evidence provided regarding exact project costs, so we must restrict capital to Route Optimization's verified fuel and road base.",
+      "adjustments": [
+        {
+          "id": 5,
+          "factor": "deploy",
+          "delta": -1,
+          "reason": "SMEs have thin data and little digital infrastructure."
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "summary": "Following the 50% budget reduction, funding must focus strictly on road route optimization where existing fleet digital infrastructure and high fuel expenditures justify investment. All projects hindered by unverified baseline data or absent digital infrastructure must be deferred.",
+    "kill_criteria": [
+      {
+        "id": 1,
+        "line": "Drop this if fleets lack operational GPS and dispatch systems."
+      },
+      {
+        "id": 2,
+        "line": "Drop this if the business lacks clean historical order data."
+      },
+      {
+        "id": 3,
+        "line": "Drop this if fragmented fleets refuse to share tracking data."
+      },
+      {
+        "id": 4,
+        "line": "Drop this if warehouse manpower costs cannot be verified at 30%."
+      },
+      {
+        "id": 5,
+        "line": "Drop this if target SMEs lack basic digital infrastructure."
+      },
+      {
+        "id": 6,
+        "line": "Drop this if conflicting road freight cost data cannot be verified against rail."
+      }
+    ]
+  }
+}
